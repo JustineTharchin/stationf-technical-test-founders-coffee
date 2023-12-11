@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+"use client"
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 interface Task {
   userId: number;
@@ -31,8 +32,8 @@ const Tasks: React.FC = () => {
       <ul>
         {tasks.map((task) => (
           <li key={task.id}>
-            <Link href={`/tasks/${task.id}`}>
-              <a>{task.title}</a>
+            <Link href={`/tasks/`}>
+                {task.title}
             </Link>
           </li>
         ))}
